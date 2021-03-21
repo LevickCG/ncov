@@ -1,16 +1,23 @@
 # 西安电子科技大学晨午晚检自动填报工具
 
-相比@anadfox233 @Hon0nly的版本添加了github actions自动执行功能
+相比@Lincest@anadfox233 @Hon0nly的版本丰富了README.md，让不熟悉github action的同学也能轻松使用本工具。
 
-> 使用时注意, fork之后应该在Github-settings-secrets中填写对应的帐号与密码
+> 使用步骤：
+>
+> - fork本项目
+> - fork之后应该在**你的仓库页面**的Github-settings-secrets中设置对应帐号密码的secrets
 >
 > ![image-20200909222919501](./img/image-20200909222919501.png)
 >
-> 新建secret名称为变量名，内容为变量的值。
->
-> 在.github/workflows/action.yml文件中加入对应账号密码.
+> 新建secret名称(NAME)为变量名，内容(VALUE)为变量的值。变量名应该与`.github/workflows/action.yml`中`secrets.***`一致。如果不想自定义可以用`NAME_NCOV`,`PSW_NCOR`作为学号、密码的变量名。
 >
 > ![image-20200909223214237](./img/image-20200909223214237.png)
+>
+> - 在项目页面中进入action
+>
+>   ![image-20210321085519307](./img/image-20210321085519307.png)
+>
+>   之后enable workflow. 然后就可以自动填报了。
 
 ## 注意
 本脚本内置了南校区和北校区的经纬度,**默认定位为南校区**
